@@ -5,13 +5,85 @@
 }
 
 html {
-  font-size: 62.5%; /* 1rem = 10px */
+  font-size: 62.5%;
 }
 
 body {
   font-family: 'Space Grotesk', sans-serif;
-  font-size: 16px;
+  font-size: 1.333rem;
   line-height: 1.5;
   background-color: #f0f0f0;
   color: #333;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Header styles */
+.header {
+  background-color: #333;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  padding: 30px;
+}
+
+.header--img {
+  height: 100%;
+  width: auto;
+  max-height: 60px;
+  margin-right: 35px;
+}
+
+.header--title {
+  font-size: 4.209rem;
+  margin-right: auto;
+}
+
+.header--subtitle {
+  font-size: 2.369rem;
+  font-weight: 500;
+}
+
+/* Media Queries for different screen sizes */
+
+/* Laptop */
+@media screen and (max-width: 1200px) {
+  body {
+    max-width: 992px;
+  }
+  .header {
+    padding: 30px;
+  }
+}
+
+/* Tablet */
+@media screen and (max-width: 768px) {
+  body {
+    max-width: 768px;
+  }
+  .header {
+    padding: 30px;
+  }
+  .header--title {
+    font-size: 3.157rem;
+  }
+  .header--subtitle {
+    font-size: 1.777rem;
+  }
+}
+
+/* Smartphone */
+@media screen and (max-width: 480px) {
+  body {
+    max-width: 480px;
+  }
+  .header {
+    padding: 30px;
+  }
+  .header--title {
+    font-size: 2rem;
+  }
+  .header--subtitle {
+    font-size: 1rem;
+  }
 }
