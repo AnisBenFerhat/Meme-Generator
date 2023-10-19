@@ -4,7 +4,7 @@ function Form() {
   const [meme, setMeme] = useState({
     topText: '',
     bottomText: '',
-    randomImage: 'http://i.imgflip.com/1bij.jpg',
+    randomImage: '',
   });
 
   const [allMemes, setAllMemes] = useState([]);
@@ -20,6 +20,12 @@ function Form() {
       .then((data) => {
         const memes = data.data.memes;
         setAllMemes(memes);
+        const randomNumber = Math.floor(Math.random() * memes.length);
+        const url = memes[randomNumber].url;
+        setMeme((prevMeme) => ({
+          ...prevMeme,
+          randomImage: url,
+        }));
       })
       .catch((error) => {
         console.error('Error fetching memes:', error);
