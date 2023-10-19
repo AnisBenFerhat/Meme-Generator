@@ -1,3 +1,13 @@
+/* Define color variables */
+:root {
+  --primary-color: #96ceb4;
+  --secondary-color: #ffeead;
+  --accent-color: #d9534f;
+  --highlight-color: #ffad60;
+  --text-color: #fff;
+}
+
+/* Body and general styles */
 * {
   box-sizing: border-box;
   margin: 0;
@@ -5,23 +15,23 @@
 }
 
 html {
-  font-size: 62.5%;
+  font-size: 62.5%; /* 1rem = 10px */
 }
 
 body {
   font-family: 'Space Grotesk', sans-serif;
-  font-size: 1.333rem;
+  font-size: 16px;
   line-height: 1.5;
-  background-color: #f0f0f0;
-  color: #333;
+  background-color: #eee;
+  color: var(--text-color);
   max-width: 1200px;
   margin: 0 auto;
 }
 
 /* Header styles */
 .header {
-  background-color: #333;
-  color: #fff;
+  background-color: var(--accent-color);
+  color: var(--text-color);
   display: flex;
   align-items: center;
   padding: 30px;
@@ -35,13 +45,54 @@ body {
 }
 
 .header--title {
-  font-size: 4.209rem;
+  font-size: 4.5rem;
   margin-right: auto;
 }
 
 .header--subtitle {
-  font-size: 2.369rem;
+  font-size: 2.8rem;
   font-weight: 500;
+}
+
+/* Form styles */
+.form {
+  display: grid;
+  grid-template-rows: 40px 40px;
+  grid-template-columns: 1fr 1fr;
+  gap: 17px;
+  padding: 30px;
+}
+
+.form--input {
+  padding: 10px;
+  font-size: 1.6rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.form--button {
+  grid-column: 1 / -1;
+  background-color: var(--primary-color);
+  color: var(--text-color);
+  padding: 10px 20px;
+  font-size: 1.6rem;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+
+  &:hover {
+    background-color: var(--highlight-color);
+  }
+}
+
+/* Adjust image size and center it */
+.meme--image {
+  width: 100%;
+  max-width: calc(50% - 17px);
+  height: auto;
+  display: block;
+  margin: 0 auto;
 }
 
 /* Media Queries for different screen sizes */
@@ -78,7 +129,7 @@ body {
     max-width: 480px;
   }
   .header {
-    padding: 30px;
+    padding: 15px;
   }
   .header--title {
     font-size: 2rem;

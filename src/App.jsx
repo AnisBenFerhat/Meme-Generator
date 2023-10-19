@@ -1,10 +1,11 @@
 import Header from './Components/Header';
+import Form from './Components/Form';
 
 function App() {
   return (
     <>
       <Header />
-      <h1>You Get Me!</h1>
+      <Form />
     </>
   );
 }
