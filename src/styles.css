@@ -1,10 +1,10 @@
 /* Define color variables */
 :root {
-  --primary-color: #96ceb4; /* Green color */
-  --secondary-color: #ffeead; /* Yellow color */
-  --accent-color: #d9534f; /* Red color */
-  --highlight-color: #ffad60; /* Orange color */
-  --text-color: #fff; /* White text color */
+  --primary-color: #96ceb4;
+  --secondary-color: #ffeead;
+  --accent-color: #d9534f;
+  --highlight-color: #ffad60;
+  --text-color: #fff;
 }
 
 /* Body and general styles */
@@ -31,7 +31,7 @@ body {
 /* Header styles */
 .header {
   background-color: var(--accent-color);
-  color: var(--text-color); /* Use white text color */
+  color: var(--text-color);
   display: flex;
   align-items: center;
   padding: 30px;
@@ -45,12 +45,12 @@ body {
 }
 
 .header--title {
-  font-size: 4.5rem; /* Updated font size for laptop */
+  font-size: 4.5rem;
   margin-right: auto;
 }
 
 .header--subtitle {
-  font-size: 2.8rem; /* Updated font size for laptop */
+  font-size: 2.8rem;
   font-weight: 500;
 }
 
@@ -72,17 +72,18 @@ body {
 
 .form--button {
   grid-column: 1 / -1;
-  background-color: var(--primary-color); /* Use the green primary color */
-  color: var(--text-color); /* Use white text color for contrast */
+  background-color: var(--primary-color);
+  color: var(--text-color);
   padding: 10px 20px;
-  font-size: 1rem;
+  font-size: 1.6rem;
+  font-weight: bold;
   border: none;
   cursor: pointer;
   transition: background-color 0.3s ease;
 
   /* Add a hover effect */
   &:hover {
-    background-color: var(--highlight-color); /* Use the orange highlight color on hover */
+    background-color: var(--highlight-color);
   }
 }
 
